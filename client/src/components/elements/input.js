@@ -1,8 +1,7 @@
-export const Input = (props) => {
-    
+export const Input = (props) => {    
     const handleChange = (e) => {
         let { name, value } = e.target
-        props.handleChange({[name]: value})
+        props.handleChange({...props.formState, [name]: value.trim()})
     }
 
     return (
